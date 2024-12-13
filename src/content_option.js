@@ -12,7 +12,7 @@ const introdata = {
         second: "I code cool websites",
         third: "I develop mobile apps",
     },
-    description: "I am Serah Shani, a full stack developer who is passionate about technology.",
+    description: "Front-End Developer skilled in HTML, CSS, JavaScript, and React.js. Experienced in building responsive, user-friendly web applications and eager to learn new technologies.",
     your_img_url: "https://images.unsplash.com/photo-1623520333087-62b8793e3d23?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 

@@ -15,15 +15,24 @@ export const Home = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center">
+          {/* Background Image Section */}
           <div
             className="h_bg-image order-1 order-lg-2 h-100"
-            style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+            style={{
+              backgroundImage: `url(${introdata.your_img_url})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              borderRadius: "10px",
+            }}
           ></div>
+
+          {/* Intro Text Section */}
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center">
-              <div className="intro mx-auto">
-                <h2 className="mb-1x">{introdata.title}</h2>
-                <h1 className="fluidz-48 mb-1x">
+              <div className="intro mx-auto text-center px-4">
+                {/* Title and Typewriter Effect */}
+                <h2 className="mb-4 display-4 text-dark">{introdata.title}</h2>
+                <h1 className="fluidz-48 mb-4 text-primary">
                   <Typewriter
                     options={{
                       strings: [
@@ -37,31 +46,33 @@ export const Home = () => {
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn">
+                <p className="mb-4 lead">{introdata.description}</p>
+
+                {/* Action Buttons */}
+                <div className="intro_btn-action pb-5 d-flex flex-column flex-md-row justify-content-center gap-3">
+                  <Link to="/portfolio" className="text-decoration-none">
+                    <button className="btn btn-primary px-4 py-2 rounded-pill shadow">
                       My Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
+                    </button>
                   </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
+                  <Link to="/contact" className="text-decoration-none">
+                    <button className="btn btn-outline-primary px-4 py-2 rounded-pill shadow">
                       Contact Me
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
+                    </button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="logo-container">
-          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iconsdb.com%2Fwhite-icons%2Fcopyright-icon.html&psig=AOvVaw3JKAXfdg_PYFtLxb5POgVh&ust=1726132790314000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDgg5HIuogDFQAAAAAdAAAAABAE" alt="Logo" className="logo-image" />
+
+        {/* Logo Section */}
+        <div className="logo-container text-center mt-5">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company Logo"
+            className="logo-image img-fluid"
+          />
         </div>
       </section>
     </HelmetProvider>
